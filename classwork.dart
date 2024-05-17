@@ -50,6 +50,21 @@ Map<String, int> nonRepeated(List<String> words) {
   return nonRepeatingFrequency;
 }
 
+Map<String, int> frequencySet(Set<String> words) {
+  Map<String, int> frequency = {};
+
+  for (String word in words) {
+    int count = 0;
+    for (String w in words) {
+      if (w == word) {
+        count++;
+      }
+    }
+    frequency[word] = count;
+  }
+
+  return frequency;
+}
 
     
 print(frequencyList(["banana", "orange", 'mango', 'banana']));
